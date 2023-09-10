@@ -1,7 +1,10 @@
 package com.example.data.model
 
-data class PlayListModel(
-    val etag: String, val items: List<Item>, val kind: String, val pageInfo: PageInfo
+data class PlaylistsModel(
+    val etag: String,
+    val items: List<Item>,
+    val kind: String,
+    val pageInfo: PageInfo
 ) {
     data class Item(
         val contentDetails: ContentDetails,
@@ -24,7 +27,8 @@ data class PlayListModel(
             val title: String
         ) {
             data class Localized(
-                val description: String, val title: String
+                val description: String,
+                val title: String
             )
 
             data class Thumbnails(
@@ -35,29 +39,40 @@ data class PlayListModel(
                 val standard: Standard
             ) {
                 data class Default(
-                    val height: Int, val url: String, val width: Int
+                    val height: Int,
+                    val url: String,
+                    val width: Int
                 )
 
                 data class High(
-                    val height: Int, val url: String, val width: Int
+                    val height: Int,
+                    val url: String,
+                    val width: Int
                 )
 
                 data class Maxres(
-                    val height: Int, val url: String, val width: Int
+                    val height: Int,
+                    val url: String,
+                    val width: Int
                 )
 
                 data class Medium(
-                    val height: Int, val url: String, val width: Int
+                    val height: Int,
+                    val url: String,
+                    val width: Int
                 )
 
                 data class Standard(
-                    val height: Int, val url: String, val width: Int
+                    val height: Int,
+                    val url: String,
+                    val width: Int
                 )
             }
         }
     }
 
     data class PageInfo(
-        val resultsPerPage: Int, val totalResults: Int
+        val resultsPerPage: Int,
+        val totalResults: Int
     )
 }
